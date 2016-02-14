@@ -1,0 +1,40 @@
+
+
+
+a{
+color:black;
+
+&:hover{
+	color:red;
+	}
+}
+
+
+// hello addme     jjjhj
+
+
+
+
+.make-variants(@i:1) when (@i =< 10) {
+  .variant-@{i} {
+    width: @i * 40px;
+    height: @i * 20px;
+    background-color: orange;
+    margin-bottom: 10px;
+    }
+  .make-variants(@i + 1); // increment function
+}
+
+.make-variants();
+
+
+.mixinName(@j:1) when (@j < 20){
+	.col-@{j} {
+	margin: @j*2px @j*4px;
+	}
+	.mixinName(@j + 1); // increment function
+}
+.mixinName();	
+
+
+

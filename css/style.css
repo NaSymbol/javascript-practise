@@ -1,0 +1,123 @@
+a {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+.variant-1 {
+  width: 40px;
+  height: 20px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-2 {
+  width: 80px;
+  height: 40px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-3 {
+  width: 120px;
+  height: 60px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-4 {
+  width: 160px;
+  height: 80px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-5 {
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-6 {
+  width: 240px;
+  height: 120px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-7 {
+  width: 280px;
+  height: 140px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-8 {
+  width: 320px;
+  height: 160px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-9 {
+  width: 360px;
+  height: 180px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.variant-10 {
+  width: 400px;
+  height: 200px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+.col-1 {
+  margin: 2px 4px;
+}
+.col-2 {
+  margin: 4px 8px;
+}
+.col-3 {
+  margin: 6px 12px;
+}
+.col-4 {
+  margin: 8px 16px;
+}
+.col-5 {
+  margin: 10px 20px;
+}
+.col-6 {
+  margin: 12px 24px;
+}
+.col-7 {
+  margin: 14px 28px;
+}
+.col-8 {
+  margin: 16px 32px;
+}
+.col-9 {
+  margin: 18px 36px;
+}
+.col-10 {
+  margin: 20px 40px;
+}
+.col-11 {
+  margin: 22px 44px;
+}
+.col-12 {
+  margin: 24px 48px;
+}
+.col-13 {
+  margin: 26px 52px;
+}
+.col-14 {
+  margin: 28px 56px;
+}
+.col-15 {
+  margin: 30px 60px;
+}
+.col-16 {
+  margin: 32px 64px;
+}
+.col-17 {
+  margin: 34px 68px;
+}
+.col-18 {
+  margin: 36px 72px;
+}
+.col-19 {
+  margin: 38px 76px;
+}
