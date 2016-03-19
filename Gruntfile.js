@@ -160,7 +160,9 @@ imagemin: {
 
 
 
-
+/******************************
+  hello this is a test
+*******************************/
 
   /****************************************************
   Load the plugin that provides the "uglify" task.
