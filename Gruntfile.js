@@ -27,41 +27,41 @@ module.exports = function(grunt) {
 copy: {
   main: {
     files: [
-      // includes files within path 
+      // includes files within path
       {expand: false, src: ['./img/*.svg'], dest: '.img2/', filter: 'isFile'},
- 
+
     ],
   },
 },
 /********************************
 			image compress options
 ********************************/
-imagemin: {                          // Task 
-    static: {                          // Target 
-      options: {                       // Target options 
+imagemin: {                          // Task
+    static: {                          // Target
+      options: {                       // Target options
         optimizationLevel: 3,
         svgoPlugins: [{ removeViewBox: false }],
         use: [mozjpeg()]
       },
-      files: {                         // Dictionary of files 
-        'img/*.png': 'img2/*.png', // 'destination': 'source' 
+      files: {                         // Dictionary of files
+        'img/*.png': 'img2/*.png', // 'destination': 'source'
         'dist/img.jpg': 'src/img.jpg',
         'dist/img.gif': 'src/img.gif'
       }
     }
-    
+
   }
 /********************************
 			html min options
 ********************************/
-htmlmin: {                                     // Task 
-    dist: {                                      // Target 
-      options: {                                 // Target options 
+htmlmin: {                                     // Task
+    dist: {                                      // Target
+      options: {                                 // Target options
         removeComments: true,
         collapseWhitespace: true
       },
-      files: {                                   // Dictionary of files 
-        '/inde.html': '/index.html'     // 'destination': 'source' 
+      files: {                                   // Dictionary of files
+        '/inde.html': '/index.html'     // 'destination': 'source'
       }
     },
 
@@ -83,7 +83,7 @@ less: {
 			Watch options
 ****************************************/
 watch: {
-  scripts: {
+  moduleA: {
     files: ['./less/*.less','./css/*.css'],
     tasks: ['less','cssmin'],
     options: {
@@ -105,7 +105,7 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-copy');
 //grunt htmlmin
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
-//grunt imagemin 
+//grunt imagemin
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
