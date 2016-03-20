@@ -154,7 +154,21 @@ imagemin: {
       ]
     }
   },
-
+  compass: {                  // Task
+      dist: {                   // Target
+        options: {              // Target options
+          sassDir: 'sass',
+          cssDir: 'css',
+          environment: 'production'
+        }
+      },
+      dev: {                    // Another target
+        options: {
+          sassDir: 'sass',
+          cssDir: 'css'
+        }
+      }
+    },
 /*****option expand ***/
   });
 
@@ -182,6 +196,8 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 //grunt uglify
 grunt.loadNpmTasks('grunt-contrib-uglify');
+//grunt sass
+grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Default task(s).
   grunt.registerTask('default', ['']);
