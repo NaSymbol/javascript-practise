@@ -85,6 +85,14 @@ watch: {
       spawn: true,
     },
   },
+  sass: {
+    files: ['./sass/*.scss'],
+    tasks: ['sass'],
+    options: {
+	  reload:true,
+      spawn: true,
+  },
+ },
 },
 /*********************************************
               concat options
@@ -169,6 +177,19 @@ imagemin: {
         }
       }
     },
+/***************************************************
+                sass options
+******************************************************/
+    sass: {                              // Task
+       dist: {                            // Target
+         options: {                       // Target options
+           style: 'expanded'
+         },
+         files: {                         // Dictionary of files
+           './css/main.css': './sass/main.scss',       // 'destination': 'source
+         }
+       },
+     },
 /*****option expand ***/
   });
 
@@ -196,8 +217,10 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 //grunt uglify
 grunt.loadNpmTasks('grunt-contrib-uglify');
-//grunt sass
+//grunt compass
 grunt.loadNpmTasks('grunt-contrib-compass');
+//grunt sass
+grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task(s).
   grunt.registerTask('default', ['']);
