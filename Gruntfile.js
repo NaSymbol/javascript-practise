@@ -190,14 +190,53 @@ imagemin: {
          }
        },
      },
+     /***************************************************
+                     connect options
+     ******************************************************/
+     connect: {
+    server: {
+      options: {
+        port: 9001,
+        base: 'www-root'
+      }
+    }
+  },
+     /***************************************************
+                     qunit options
+     ******************************************************/
+     qunit: {
+         all: ['test/*.html']
+       },
+    /********************************************************
+                    browserify options
+    ********************************************************/
+       browserify: {
+         dist: {
+           files: {
+             'build/module.js': ['client/scripts/**/*.js', 'client/scripts/**/*.coffee']
+           },
+           options: {
+             transform: ['coffeeify']
+           }
+         }
+       },
+       /********************************************************
+                       babel options
+       ********************************************************/
+       babel: {
+		options: {
+			sourceMap: true,
+			presets: ['babel-preset-es2015']
+		},
+		dist: {
+			files: {
+				'dist/app.js': 'src/app.js'
+			}
+		}
+	}
 /*****option expand ***/
   });
 
-
-
-/******************************
-  hello this is a test
-*******************************/
 
   /****************************************************
   Load the plugin that provides the "uglify" task.
@@ -221,8 +260,19 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-compass');
 //grunt sass
 grunt.loadNpmTasks('grunt-contrib-sass');
+//grunt qunit
+grunt.loadNpmTasks('grunt-contrib-qunit');
+//grunt connect
+grunt.loadNpmTasks('grunt-contrib-connect');
+//grunt jasmine
+grunt.loadNpmTasks('grunt-contrib-jasmine');
+//grunt
+grunt.loadNpmTasks('grunt-browserify');
+//
+grunt.loadNpmTasks('grunt-contrib-csslint');
+
 
   // Default task(s).
   grunt.registerTask('default', ['']);
-
+  grunt.registerTask('test',[])
 };
