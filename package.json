@@ -4,7 +4,9 @@
   "description": "iii",
   "main": "index.html",
   "scripts": {
-    "test": "k"
+    "test": "k",
+    "build-js": "browserify js/main.js > js/findem.js",
+    "watch-js": "watchify js/main.js -o js/findem.js -v"
   },
   "author": "",
   "license": "ISC",

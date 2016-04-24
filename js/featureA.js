@@ -1,5 +1,5 @@
 
-console.log("ehllo");
+document.write(console.log("ehllo"));
 
 var objA = {
   propA: "propA",
